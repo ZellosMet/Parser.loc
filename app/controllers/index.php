@@ -37,7 +37,7 @@ if(isset($_POST['btn_upload']))
                     $text = htmlentities(file_get_contents($file_path));
                     $load_content = $text;
                     //Выводим пропарсенный текст в форму
-                    $parser_load_content = $parser->text($str);
+                    $parser_load_content = $parser->text($text);
                     //Удаляем временный файл с сервера
                     unlink($file_path);
                     $success = "File uploaded successfully!";
